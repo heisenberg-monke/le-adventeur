@@ -1,0 +1,53 @@
+
+# TITLE SCREEN
+scene=title
+title=LE ADVENTURER
+text=An adventure awaits. What will you do?
+option=Start adventure|explore|start
+option=Quit|title|quit
+end
+
+# EXPLORATION
+scene=explore
+title=TOWN GATE
+text=You stand at the gate of a strange town. A guard blocks your path.
+option=Talk to the guard|guard|default
+option=Enter the forest|fight|default
+option=Open inventory|inventory|default
+option=Pause|pause|default
+end
+
+# DIALOGUE
+scene=guard
+title=THE GUARD
+text=Guard: I have never seen you here before. I cannot let strangers enter the town.
+option=Ask again|guard|default
+option=Return to the gate|explore|back
+end
+
+# COMBAT
+scene=fight
+title=COMBAT
+text=A goblin blocks your path. Each attack costs you 2 HP.
+option=Attack|fight|attack
+option=Use a potion|fight|heal
+option=Flee|explore|default
+option=Pause|pause|default
+end
+
+# INVENTORY
+scene=inventory
+title=INVENTORY
+text=Your inventory contains potions and your equipped weapon.
+option=Use a potion|inventory|heal
+option=Return|explore|back
+end
+
+# PAUSE
+scene=pause
+title=PAUSED
+text=Take a breath. Your adventure is waiting.
+option=Resume|explore|back
+option=Inventory|inventory|default
+option=Main menu|title|default
+end
